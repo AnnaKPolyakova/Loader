@@ -1,6 +1,7 @@
 Django~=3.2.3
 djangorestframework==3.12.4
 python-dotenv==0.17.1
+Pillow
 isort
 drf-spectacular
 black
