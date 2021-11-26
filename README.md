@@ -23,7 +23,7 @@ python manage.py runserver
 
 ```
 Производится через API
-http://127.0.0.1:8000/api/v1/auth/users/
+http://127.0.0.1:8000/api/v1/auth/user/
 Необходимые поля:
 - username
 - email
