@@ -4,7 +4,7 @@ from image.views import ImageCreateAPIView, UserCreateAPIView
 
 extra_patterns = [
     path("auth/user/", UserCreateAPIView.as_view(), name="user"),
-    path("image/", ImageCreateAPIView.as_view()),
+    path("image/", ImageCreateAPIView.as_view(), name="image"),
 ]
 
 urlpatterns = [

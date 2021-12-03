@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 
-LIMIT_KB = 200
+LIMIT_KB = 20099
 
 
 def validate_image(image):
