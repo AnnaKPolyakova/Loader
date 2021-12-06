@@ -5,18 +5,30 @@
 Python 3.9+
 Django
 Django REST Framework
+Poetry
 ```
 
 ## Запуск проекта локально
 ```
 1) Скачать проект с гитхаб
-2) Установить зависимости:
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-3) Применить миграции:
-python manage.py migrate
-4) Запустить проект:
-python manage.py runserver
+2) Установить зависимости c помощью poetry:
+устанавливаем potry [документации poetry](https://python-poetry.org/docs/cli/)
+- poetry shell
+- poetry install
+3) Создаем в корне .env и добавляем в него следующие данные:
+
+DB_NAME=       # имя базы данных
+POSTGRES_USER=        # логин для подключения к базе данных
+POSTGRES_PASSWORD=       # пароль для подключения к БД (установите свой)
+DB_HOST=      # название сервиса (контейнера)
+DB_PORT=      # порт для подключения к БД
+
+4) Разворачиваем и запускаем проект:
+- docker compose up
+- docker-compose exec web python manage.py migrate --noinput   # применяем миграции
+- docker-compose exec web python manage.py createsuperuser     # создаем суперпользователя
+- docker-compose exec web python manage.py collectstatic --no-input     # собираем статику
+
 ```
 
 ## Регистрация пользователя
@@ -44,5 +56,5 @@ http://127.0.0.1:8000/api/v1/image/
 
 ## Автодокументация
 ```
-http://127.0.0.1:8000/api/schema/redoc/
+http://127.0.0.1/api/schema/redoc/
 ```
