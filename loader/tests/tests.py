@@ -13,15 +13,10 @@ pytestmark = pytest.mark.django_db
 class TestLoaderAPI:
     def test_create_user_url(self, guest_client):
         url = CREATE_USER_URL
-        data = {
-            "username": "Testy",
-            "email": "test@test6.ru",
-            "password": "testtest"
-        }
+        data = {"username": "Testy", "email": "test@test6.ru", "password": "testtest"}
         response = guest_client.post(url, data=data)
         assert response.status_code == 201, (
-            f"Проверьте, что при POST запросе {url} " 
-            f"возвращается " f"статус 200"
+            f"Проверьте, что при POST запросе {url} " f"возвращается " f"статус 200"
         )
 
     def test_image_url_for_authorized_client(self, authorized_client, image):
@@ -31,8 +26,7 @@ class TestLoaderAPI:
 
         response = authorized_client.post(url, data, format="multipart")
         assert response.status_code == 201, (
-            f"Проверьте, что при POST запросе {url} " 
-            f"возвращается " f"статус 201"
+            f"Проверьте, что при POST запросе {url} " f"возвращается " f"статус 201"
         )
 
     def test_image_url_for_guest_client(self, guest_client, image):
@@ -42,8 +36,7 @@ class TestLoaderAPI:
 
         response = guest_client.post(url, data, format="multipart")
         assert response.status_code == 403, (
-            f"Проверьте, что при POST запросе {url} " 
-            f"возвращается " f"статус 201"
+            f"Проверьте, что при POST запросе {url} " f"возвращается " f"статус 201"
         )
 
     def test_image_create(self, authorized_client, image):
