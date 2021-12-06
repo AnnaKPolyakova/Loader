@@ -60,6 +60,7 @@ http://127.0.0.1/api/schema/redoc/
 
 Тесты можно запустить локально без docker, для этого необходимо создать и 
 активировать venv с помощью poetry:
+- python -m venv venv
 - source venv/bin/activate
 - устанавливаем poetry [документации poetry](https://python-poetry.
   org/docs/cli/)
