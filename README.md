@@ -12,7 +12,8 @@ Poetry
 ```
 1) Скачать проект с гитхаб
 2) Установить зависимости c помощью poetry:
-устанавливаем potry [документации poetry](https://python-poetry.org/docs/cli/)
+устанавливаем poetry (документация с описанием установки https://python-poetry.
+org/docs/cli/)
 - poetry shell
 - poetry install
 3) Создаем в корне .env и добавляем в него следующие данные:
