@@ -57,13 +57,14 @@ http://127.0.0.1/api/schema/redoc/
 ## Тесты
 ```
 - docker-compose exec pytest
+```
 
 Тесты можно запустить локально без docker, для этого необходимо создать и 
-активировать venv с помощью poetry:
+активировать venv с помощью poetry [документация с информацией по установке 
+poetry](https://python-poetry.org/docs/cli/):
+```
 - python -m venv venv
 - source venv/bin/activate
-- устанавливаем poetry (документации с информацией по установке https://python-poetry.
-  org/docs/cli/)
 - poetry install
 - pytest
 ```
